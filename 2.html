@@ -7,6 +7,36 @@
 <link href="style.css" rel="stylesheet">
 
     <style media="screen">
+    h5{display:block;
+      width: 900px;
+      height: auto;
+    background-color: rgb(248, 159, 159);}
+    .stop{margin:auto;}
+    .xx{font-size: 50px;}
+
+    .accordion {
+    background-color: rgb(248, 159, 159);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+
+  .active, .accordion:hover {
+    background-color: rgb(248, 159, 159);
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #f4c5c0
+    overflow: hidden;
+  }
 
 </style>
 </head>
@@ -18,24 +48,55 @@
     <div class="grid">
         <div class="navigation">
 
-          <h3><ul>
-            <li><a href="1.html" class= "yell">movie</a></li>
-            <li><a href="2.html" class= "yell">BOL4</a></li>
-            <li><a href="3.html" class= "yell">sleeping</a></li>
-        </ul></h3>
+          <h2>MENU</h2>
 
+    <button class="accordion" >movie</button>
+    <div class="panel">
+    <a href="1.html"  class= "yell2"><p>스릴러 추천 영화</p></a>
+    </div>
+
+    <button class="accordion">BOL4</button>
+    <div class="panel">
+    <a href="2.html"><p>볼빨간 사춘기에 대한 간단한 소개</p></a>
+    </div>
+
+    <button class="accordion">sleeping</button>
+    <div class="panel">
+    <a href="3.html"><p>잠에 대한 다양한 분석</p></a>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+    }
+    </script>
       <style>
         h3{font size: 50px;}
+
       </style>
 
 </div>
 <div class="iclass">
 
-  <h2>BOL4-볼빨간 사춘기</h2>
+  <h5>
+    <p class="xx">BOL4-볼빨간 사춘기</p>
+    <br>
+    <br>
+
   <img width="560" height="315" img src="bol4.png" alt="bol4">
-  <br>
-  <br>
-<table border="2">
+
+<table border="2" class="stop">
   <tr><th>멤버</th>
   <th>안지영,우지영</th>
 </tr>
@@ -59,9 +120,12 @@
 
 수상경력
 <br>
+<br>
 2016년
 <li>제8회 《멜론 뮤직 어워드》 - 인디 부문 뮤직스타일상</li>
 <br>
+<br>
+
 2017년
 <li>제6회 《가온 차트 K-POP 어워드》 - 올해의 발견상 인디부문</li>
 <li>제31회 《Golden Disc Awards》 - 음원 신인상</li>
@@ -71,6 +135,7 @@
 <li>《엠넷 아시안 뮤직 어워드》 - 베스트 보컬 퍼포먼스 그룹상</li>
 <li>제9회 《멜론 뮤직 어워드》 - TOP 10상</li>
 <br>
+<br>
 2018년
 <br>
 <li>제2회 《소리바다 베스트 케이뮤직 어워드》 - 본상</li>
@@ -78,7 +143,9 @@
 <li>제27회 《서울가요대상》 - 본상</li>
 <li>제10회 《멜론 뮤직 어워드》 - TOP 10상</li>
 <br>
+<br>
 2019년
+<br>
 <br>
 
 <li>제8회 《가온 차트 K-POP 어워드》 - 올해의 가수상 음원 (5월)</li>
@@ -95,7 +162,7 @@
   <br>
 <br>
 <div class="article">
-  <p><table border="2">
+  <p><table border="2" class="stop">
     <tr>
 <th>Instargram</th>
 <th> https://www.instagram.com/official_bol4/</th>
@@ -111,7 +178,7 @@
 </table></p>
 
 
-
+</h5>
 </div>
 </div>
 </div>

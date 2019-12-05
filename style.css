@@ -53,5 +53,8 @@ h1 {
 }
 body{background-color: #f4c5c0;}
 
-.yell {font color:#FFBB00;
+.yell {font color:black;;
 font-size: 60px;}
+
+.yell2 {font color:#FFBB00;}
+body { font-family:sans-serif; } 

@@ -18,6 +18,31 @@ font-size: 50px;}
 .table{margin-left: 40px;}
 .yell {font color:#FFBB00;
 font-size: 60px;}
+
+.accordion {
+background-color: rgb(248, 159, 159);
+color: #444;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+transition: 0.4s;
+}
+
+.active, .accordion:hover {
+background-color: rgb(248, 159, 159);
+}
+
+.panel {
+padding: 0 18px;
+display: none;
+background-color:#f4c5c0
+overflow: hidden;
+}
+.yy{font size:20px;}
 </style>
 
 </head>
@@ -27,12 +52,40 @@ font-size: 60px;}
 
     <div class="grid">
         <div class="navigation">
+          <h2>MENU</h2>
 
-          <h3><ul>
-            <li><a href="1.html" class= "yell">movie</a></li>
-            <li><a href="2.html" class= "yell">BOL4</a></li>
-            <li><a href="3.html" class= "yell">sleeping</a></li>
-        </ul></h3>
+    <button class="accordion" >movie</button>
+    <div class="panel">
+    <a href="1.html"  class= "yell2"><p>스릴러 추천 영화</p></a>
+    </div>
+
+    <button class="accordion">BOL4</button>
+    <div class="panel">
+    <a href="2.html"><p>볼빨간 사춘기에 대한 간단한 소개</p></a>
+    </div>
+
+    <button class="accordion">sleeping</button>
+    <div class="panel">
+    <a href="3.html"><p>잠에 대한 다양한 분석</p></a>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+    }
+    </script>
+
 
 </div>
 <div class="iclass">
@@ -49,13 +102,13 @@ font-size: 60px;}
 <p>관객수 10,084,520</p>
 <p>평점9.06</p>
 <p>감독 봉준호</p>
-<p>예고편</p></td>
+</td>
 <td><p>2.숨바꼭질</p>
 <p>개봉 2013.08.14</p>
 <p>관객수 5,604,106</p>
 <p>평점 6.79</p>
 <p>감독 허정</p>
-<p>예고편</p></td></tr>
+</td></tr>
 <tr><td><img src="getout.jpg" alt="mmm" width="400px"></th></td>
   <td><img src="usposter.jpg" alt="mmmm" width="400px"></th></td>
 </tr>
@@ -64,18 +117,17 @@ font-size: 60px;}
 <p>관객수 2,138,524</p>
 <p>평점 8.45</p>
 <p>감독 조던 필</p>
-<p>예고편</p> </td>
+ </td>
 <td><p>4.어스</p>
 <p>개봉 2019.03.27</p>
 <p>관객수 1,475,088</p>
 <p>평점 7.69</p>
 <p>감독 조던 필</p>
-<p>예고편</p></td></tr>
+</td></tr>
 </table>
 
 
-
-
+<div class="yy">
     <p>기생충 줄거리</p>
     <br>
     <br>
@@ -133,6 +185,7 @@ font-size: 60px;}
 <p>  다음 날 잠에서 깬 크리스는 악몽을 꾸었다고 생각한다.</p>
 
 어스 줄거리
+</div>
 </h5>
 </div>
 </div>
