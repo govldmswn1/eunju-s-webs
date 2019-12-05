@@ -51,12 +51,10 @@ font-size: 50px;}
 h1 {
   border-bottom: none;}
 }
-body{background-color: #f4c5c0;}
+body{background-color: #f4c5c0;
+ font-family:sans-serif; }
 
 .yell {font color:black;;
 font-size: 60px;}
 
 .yell2 {font color:#FFBB00;}
-h2{font-size: 20px;}
-h4{font-size: 30px;}
-body { font-family:sans-serif; }
